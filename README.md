@@ -1,8 +1,10 @@
 # devground-labs.github.io
 
-The devground-labs website: https://devground-labs.github.io
+The devground-labs website: https://devgroundlabs.in
 
 Plain static HTML, served by GitHub Pages straight from `main`. There's no build step.
+
+The custom domain is set in `CNAME`. DNS for `devgroundlabs.in` is managed at Hostinger: four `A` and four `AAAA` records for `@` point to GitHub Pages, and `www` is a `CNAME` to `devground-labs.github.io`.
 
 ## Layout
 

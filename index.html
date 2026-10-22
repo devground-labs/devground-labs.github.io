@@ -1,54 +1,265 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>devground-labs</title>
-  <meta name="description" content="Small, open-source Mac apps from devground-labs.">
+  <title>devground-labs · Native, private, open-source Mac apps</title>
+  <meta name="description" content="devground-labs is an independent studio making focused macOS apps. Native, private by default, free and open source. Home of DiskLens.">
+  <link rel="canonical" href="https://devgroundlabs.in/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/style.css">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devgroundlabs.in/">
   <meta property="og:title" content="devground-labs">
-  <meta property="og:description" content="Small, open-source Mac apps from devground-labs.">
+  <meta property="og:description" content="Native, private, open-source Mac apps. Home of DiskLens.">
+  <meta property="og:image" content="https://devgroundlabs.in/disklens/icon.png">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/">devground-labs</a>
-      <nav class="nav">
+      <a class="brand" href="/" aria-label="devground-labs home">
+        <img src="/assets/logo.svg" alt="" width="28" height="28"><span>devground<em>-labs</em></span>
+      </a>
+      <nav class="nav" aria-label="Main">
         <a href="#apps">Apps</a>
-        <a href="https://github.com/devground-labs">GitHub</a>
+        <a href="#principles">Principles</a>
+        <a href="#open-source">Open source</a>
       </nav>
+      <div class="header-actions">
+        <a class="icon-link" href="https://github.com/devground-labs" aria-label="devground-labs on GitHub">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a class="btn btn-primary btn-sm" href="/disklens/">Get DiskLens</a>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
+  <main id="main">
+    <!-- Hero -->
     <section class="hero">
-      <h1>Small tools that do one thing well.</h1>
-      <p class="lede">devground-labs makes focused, open-source apps for the Mac. Free to download, no accounts, and nothing sent anywhere.</p>
+      <div class="wrap">
+        <a class="pill" href="/disklens/"><b>New</b> DiskLens <span data-release-repo="devground-labs/disklens" data-format="short">0.1</span> is out <span class="chev" aria-hidden="true">›</span></a>
+        <h1>Thoughtful software <span class="gradient-text">for your Mac.</span></h1>
+        <p class="lead">devground-labs is an independent studio making small, focused macOS apps. Native, private by default, and open source from day one.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L9 11.6V3a1 1 0 0 1 1-1zM4 16a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"/></svg>
+            Download DiskLens
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#apps">Explore apps</a>
+        </div>
+        <p class="hero-meta">Free · macOS 11 or later · Apple silicon and Intel</p>
+
+        <div class="hero-visual reveal">
+          <div class="mock" role="img" aria-label="DiskLens Overview screen: a disk usage bar split by category, the amount that is safe to clear, and a list of locations with safety labels and sizes.">
+            <div class="mock-bar"><i></i><i></i><i></i><span>DiskLens</span></div>
+            <div class="mock-body">
+              <aside class="mock-side">
+                <div class="mock-app"><img src="/disklens/icon.png" alt=""><div><b>DiskLens</b><small>by devground-labs</small></div></div>
+                <div class="mock-label">LIBRARY</div>
+                <div class="mock-nav on">Overview</div>
+                <div class="mock-nav">History</div>
+                <div class="mock-nav">Explorer</div>
+                <div class="mock-gap"></div>
+                <div class="mock-label">CATEGORIES</div>
+                <div class="mock-nav">All locations<em>267.7 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-caches)"></i>Caches &amp; junk<em>31.2 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-dev)"></i>Developer<em>68.4 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-apps)"></i>Apps &amp; app data<em>52.1 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-personal)"></i>Your files<em>91.7 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-system)"></i>System<em>24.3 GB</em></div>
+                <div class="mock-free"><b>123.4 GB free</b><div class="track"><span></span></div><small>370.6 GB of 494.4 GB used</small></div>
+              </aside>
+              <div class="mock-main">
+                <div class="mock-toolbar"><h4>Overview</h4><div class="mock-search">Search locations</div><div class="mock-btn">Scan now</div></div>
+                <div class="mock-cards">
+                  <div class="mock-card">
+                    <div class="cap">Macintosh HD · Data</div>
+                    <div class="big">370.6 GB <small>used of 494.4 GB</small></div>
+                    <div class="diskbar">
+                      <span style="width:6.3%;background:var(--g-caches)"></span><span style="width:13.8%;background:var(--g-dev)"></span><span style="width:10.5%;background:var(--g-apps)"></span><span style="width:18.6%;background:var(--g-personal)"></span><span style="width:4.9%;background:var(--g-system)"></span><span style="width:20.8%;background:var(--g-other)"></span><span style="flex:1;background:var(--g-free)"></span>
+                    </div>
+                    <div class="legend"><span><i style="background:var(--g-caches)"></i>Caches</span><span><i style="background:var(--g-dev)"></i>Developer</span><span><i style="background:var(--g-apps)"></i>Apps</span><span><i style="background:var(--g-personal)"></i>Your files</span><span><i style="background:var(--g-system)"></i>System</span><span><i style="background:var(--g-free)"></i>Free</span></div>
+                  </div>
+                  <div class="mock-card mock-stat">
+                    <div><div class="cap">Safe to clear</div><div class="big good">38.6 GB</div></div>
+                    <p>Rebuilds itself or isn't needed any more. Clearing it loses nothing.</p>
+                  </div>
+                </div>
+                <div class="mock-rows">
+                  <div class="mock-row head"><span>LOCATION</span><span>STATUS</span><span class="size">SIZE</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-personal)"></i>iPhone/iPad backups</span><span class="badge careful">Your files</span><span class="size">41.3 GB</span></div>
+                  <div class="mock-row sel"><span class="name"><i class="dot" style="background:var(--g-dev)"></i>Xcode DerivedData</span><span class="badge safe">Safe to clear</span><span class="size">18.2 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-dev)"></i>Docker data</span><span class="badge review">Check first</span><span class="size">14.9 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-caches)"></i>User caches</span><span class="badge safe">Safe to clear</span><span class="size">9.6 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-dev)"></i>node_modules (all projects)</span><span class="badge safe">Safe to clear</span><span class="size">7.4 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-system)"></i>Swap / VM</span><span class="badge system">Leave to macOS</span><span class="size">6.0 GB</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><b>Native</b><span>Built for macOS</span></div>
+          <div class="fact"><b>Private</b><span>Nothing leaves your Mac</span></div>
+          <div class="fact"><b>Free</b><span>No accounts, no ads</span></div>
+          <div class="fact"><b>Open</b><span>Apache 2.0 source</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="apps">
-      <h2 class="section-title">Apps</h2>
-      <div class="apps">
-        <!-- To add an app: copy this card, and copy /disklens/ to /<app>/. -->
-        <a class="app-card" href="/disklens/">
-          <img src="/disklens/icon.png" alt="" width="64" height="64">
-          <div>
+    <!-- Apps -->
+    <section class="section" id="apps">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Apps</span>
+          <h2 class="h2">One job each, done properly.</h2>
+          <p class="lead">Every devground-labs app solves one real problem, explains itself in plain language, and stays out of your way.</p>
+        </div>
+
+        <article class="app-feature reveal">
+          <div class="copy">
+            <img src="/disklens/icon.png" alt="" width="72" height="72">
             <h3>DiskLens</h3>
-            <p>See what's filling your Mac's disk, and what's safe to reclaim.</p>
-            <span class="meta">macOS · Free · Open source</span>
+            <p class="tagline">See what's filling your Mac's disk, and what's safe to reclaim.</p>
+            <ul class="checks">
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".14"/><path d="m7.5 12.5 3 3 6-6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Explains 40+ hidden locations behind "System Data"</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".14"/><path d="m7.5 12.5 3 3 6-6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Labels each one: safe to clear, check first, or leave alone</li>
+              <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".14"/><path d="m7.5 12.5 3 3 6-6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Never deletes anything on its own</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg">Download</a>
+              <a class="link-arrow" href="/disklens/">Learn more</a>
+            </div>
           </div>
-        </a>
-        <div class="app-card soon">More apps coming soon</div>
+          <div class="art" aria-hidden="true">
+            <div class="meter">
+              <div class="cap">Safe to clear</div>
+              <div class="big">38.6 GB <small>of 370.6 GB used</small></div>
+              <div class="diskbar">
+                <span style="width:6.3%;background:var(--g-caches)"></span><span style="width:13.8%;background:var(--g-dev)"></span><span style="width:10.5%;background:var(--g-apps)"></span><span style="width:18.6%;background:var(--g-personal)"></span><span style="width:4.9%;background:var(--g-system)"></span><span style="width:20.8%;background:var(--g-other)"></span><span style="flex:1;background:var(--g-free)"></span>
+              </div>
+              <ul>
+                <li><i style="background:var(--g-dev)"></i>Xcode DerivedData<b>18.2 GB</b></li>
+                <li><i style="background:var(--g-caches)"></i>User caches<b>9.6 GB</b></li>
+                <li><i style="background:var(--g-dev)"></i>node_modules<b>7.4 GB</b></li>
+                <li><i style="background:var(--g-caches)"></i>Trash<b>3.4 GB</b></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <div class="soon-card reveal">
+          <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
+          <div><b>More apps are on the way</b>Follow devground-labs on GitHub to hear about the next one first.</div>
+          <a class="link-arrow" href="https://github.com/devground-labs">Follow on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class="section alt" id="principles">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Principles</span>
+          <h2 class="h2">How we build.</h2>
+          <p class="lead">The rules every devground-labs app follows, so you know what you're installing.</p>
+        </div>
+        <div class="grid grid-4 reveal">
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3>Private by default</h3>
+            <p>No analytics, no telemetry, no accounts. Your data stays on your Mac.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg></div>
+            <h3>Open source</h3>
+            <p>Every app is Apache 2.0 licensed. Read the code, build it yourself, or help improve it.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+            <h3>Native and fast</h3>
+            <p>Small, compiled apps that launch instantly and respect light mode, dark mode and system fonts.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>You stay in control</h3>
+            <p>Apps explain and suggest. They don't make changes to your Mac without you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open source -->
+    <section class="section" id="open-source">
+      <div class="wrap">
+        <div class="band reveal">
+          <div>
+            <span class="eyebrow">Open source</span>
+            <h2 class="h2">Built in the open.</h2>
+            <p class="lead">Every release is built from public source by GitHub Actions, so what you download is exactly what's in the repository. Issues, ideas and pull requests are welcome.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://github.com/devground-labs">Browse on GitHub</a>
+              <a class="btn btn-ghost" href="https://github.com/devground-labs/disklens/blob/main/CONTRIBUTING.md">Contribute</a>
+            </div>
+          </div>
+          <div class="terminal" aria-label="Build DiskLens from source">
+            <div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="p">$</span> git clone https://github.com/devground-labs/disklens
+<span class="p">$</span> cd disklens
+<span class="p">$</span> cargo build --release
+<span class="c">   Compiling disklens v0.1.0</span>
+<span class="ok">    Finished</span> release profile [optimized]
+<span class="p">$</span> ./target/release/disklens</pre>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>© 2026 devground-labs</span>
-      <a href="https://github.com/devground-labs">github.com/devground-labs</a>
+      <div class="footer-grid">
+        <div class="about">
+          <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="28" height="28"><span>devground<em>-labs</em></span></a>
+          <p>Native, private, open-source apps for the Mac.</p>
+        </div>
+        <div>
+          <h4>Apps</h4>
+          <ul>
+            <li><a href="/disklens/">DiskLens</a></li>
+            <li><a href="https://github.com/devground-labs/disklens/releases">Release notes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Open source</h4>
+          <ul>
+            <li><a href="https://github.com/devground-labs">GitHub</a></li>
+            <li><a href="https://github.com/devground-labs/disklens/blob/main/CONTRIBUTING.md">Contributing</a></li>
+            <li><a href="https://github.com/devground-labs/disklens/issues">Report an issue</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="https://github.com/devground-labs/disklens/blob/main/LICENSE">License</a></li>
+            <li><a href="https://github.com/devground-labs/disklens/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 devground-labs</span>
+        <span>Mac is a trademark of Apple Inc.</span>
+      </div>
     </div>
   </footer>
+
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>

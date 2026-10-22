@@ -1,89 +1,302 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DiskLens for Mac</title>
-  <meta name="description" content="See what's filling your Mac's disk, and what's safe to reclaim. Free and open source.">
+  <title>DiskLens for Mac · See what's filling your disk</title>
+  <meta name="description" content="DiskLens shows what's filling your Mac's disk, explains every hidden location in plain language, and tells you what's safe to reclaim. Free and open source.">
+  <link rel="canonical" href="https://devgroundlabs.in/disklens/">
   <link rel="icon" href="/disklens/icon.png" type="image/png">
   <link rel="stylesheet" href="/assets/style.css">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devgroundlabs.in/disklens/">
   <meta property="og:title" content="DiskLens for Mac">
   <meta property="og:description" content="See what's filling your Mac's disk, and what's safe to reclaim. Free and open source.">
   <meta property="og:image" content="https://devgroundlabs.in/disklens/icon.png">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/">devground-labs</a>
-      <nav class="nav">
-        <a href="/#apps">Apps</a>
-        <a href="https://github.com/devground-labs/disklens">Source</a>
+      <a class="brand" href="/" aria-label="devground-labs home">
+        <img src="/assets/logo.svg" alt="" width="28" height="28"><span>devground<em>-labs</em></span>
+      </a>
+      <nav class="nav" aria-label="DiskLens">
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
       </nav>
+      <div class="header-actions">
+        <a class="icon-link" href="https://github.com/devground-labs/disklens" aria-label="DiskLens source on GitHub">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a class="btn btn-primary btn-sm" href="https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg">Download</a>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="app-hero">
-      <img src="/disklens/icon.png" alt="DiskLens icon" width="128" height="128">
-      <div>
-        <h1>DiskLens</h1>
-        <p>See what's filling your Mac's disk, and what's safe to reclaim.</p>
+  <main id="main">
+    <!-- Hero -->
+    <section class="product-hero">
+      <div class="wrap">
+        <img class="app-icon" src="/disklens/icon.png" alt="DiskLens icon" width="112" height="112">
+        <p class="app-name">DiskLens</p>
+        <h1>See what's really filling <span class="gradient-text">your Mac.</span></h1>
+        <p class="lead">macOS lumps gigabytes into "System Data" and tells you nothing. DiskLens opens it up, explains every location in plain language, and shows you what's safe to reclaim.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L9 11.6V3a1 1 0 0 1 1-1zM4 16a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"/></svg>
+            Download for Mac
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/devground-labs/disklens">View source</a>
+        </div>
+        <p class="hero-meta"><span data-release-repo="devground-labs/disklens">Latest version</span> · Free · macOS 11+ · Apple silicon and Intel</p>
+
+        <div class="hero-visual reveal">
+          <div class="mock" role="img" aria-label="DiskLens Overview screen: a disk usage bar split by category, the amount that is safe to clear, and a list of locations with safety labels and sizes.">
+            <div class="mock-bar"><i></i><i></i><i></i><span>DiskLens</span></div>
+            <div class="mock-body">
+              <aside class="mock-side">
+                <div class="mock-app"><img src="/disklens/icon.png" alt=""><div><b>DiskLens</b><small>by devground-labs</small></div></div>
+                <div class="mock-label">LIBRARY</div>
+                <div class="mock-nav on">Overview</div>
+                <div class="mock-nav">History</div>
+                <div class="mock-nav">Explorer</div>
+                <div class="mock-gap"></div>
+                <div class="mock-label">CATEGORIES</div>
+                <div class="mock-nav">All locations<em>267.7 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-caches)"></i>Caches &amp; junk<em>31.2 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-dev)"></i>Developer<em>68.4 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-apps)"></i>Apps &amp; app data<em>52.1 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-personal)"></i>Your files<em>91.7 GB</em></div>
+                <div class="mock-nav"><i class="dot" style="background:var(--g-system)"></i>System<em>24.3 GB</em></div>
+                <div class="mock-free"><b>123.4 GB free</b><div class="track"><span></span></div><small>370.6 GB of 494.4 GB used</small></div>
+              </aside>
+              <div class="mock-main">
+                <div class="mock-toolbar"><h4>Overview</h4><div class="mock-search">Search locations</div><div class="mock-btn">Scan now</div></div>
+                <div class="mock-cards">
+                  <div class="mock-card">
+                    <div class="cap">Macintosh HD · Data</div>
+                    <div class="big">370.6 GB <small>used of 494.4 GB</small></div>
+                    <div class="diskbar">
+                      <span style="width:6.3%;background:var(--g-caches)"></span><span style="width:13.8%;background:var(--g-dev)"></span><span style="width:10.5%;background:var(--g-apps)"></span><span style="width:18.6%;background:var(--g-personal)"></span><span style="width:4.9%;background:var(--g-system)"></span><span style="width:20.8%;background:var(--g-other)"></span><span style="flex:1;background:var(--g-free)"></span>
+                    </div>
+                    <div class="legend"><span><i style="background:var(--g-caches)"></i>Caches</span><span><i style="background:var(--g-dev)"></i>Developer</span><span><i style="background:var(--g-apps)"></i>Apps</span><span><i style="background:var(--g-personal)"></i>Your files</span><span><i style="background:var(--g-system)"></i>System</span><span><i style="background:var(--g-free)"></i>Free</span></div>
+                  </div>
+                  <div class="mock-card mock-stat">
+                    <div><div class="cap">Safe to clear</div><div class="big good">38.6 GB</div></div>
+                    <p>Rebuilds itself or isn't needed any more. Clearing it loses nothing.</p>
+                  </div>
+                </div>
+                <div class="mock-rows">
+                  <div class="mock-row head"><span>LOCATION</span><span>STATUS</span><span class="size">SIZE</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-personal)"></i>iPhone/iPad backups</span><span class="badge careful">Your files</span><span class="size">41.3 GB</span></div>
+                  <div class="mock-row sel"><span class="name"><i class="dot" style="background:var(--g-dev)"></i>Xcode DerivedData</span><span class="badge safe">Safe to clear</span><span class="size">18.2 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-dev)"></i>Docker data</span><span class="badge review">Check first</span><span class="size">14.9 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-caches)"></i>User caches</span><span class="badge safe">Safe to clear</span><span class="size">9.6 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-dev)"></i>node_modules (all projects)</span><span class="badge safe">Safe to clear</span><span class="size">7.4 GB</span></div>
+                  <div class="mock-row"><span class="name"><i class="dot" style="background:var(--g-system)"></i>Swap / VM</span><span class="badge system">Leave to macOS</span><span class="size">6.0 GB</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <div class="download">
-      <a class="btn" href="https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg">
-        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L9 11.6V3a1 1 0 0 1 1-1zM4 16a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"/></svg>
-        Download for Mac
-      </a>
-      <a class="btn btn-secondary" href="https://github.com/devground-labs/disklens/releases">All versions</a>
-    </div>
-    <p class="download-note"><span data-release-repo="devground-labs/disklens">Latest version</span> · macOS 11 or later · Free</p>
-
-    <section class="card install" id="install">
-      <h2>Installing</h2>
-      <ol>
-        <li>Open <strong>DiskLens.dmg</strong> and drag <strong>DiskLens</strong> into <strong>Applications</strong>.</li>
-        <li>Open DiskLens. The first time, macOS says it can't verify the app, because DiskLens isn't notarized by Apple yet. Click <strong>Done</strong>.</li>
-        <li>Open <strong>System Settings › Privacy &amp; Security</strong>, scroll down and click <strong>Open Anyway</strong> next to DiskLens. You only need to do this once.</li>
-      </ol>
-      <p>Prefer Terminal? Run <code>xattr -dr com.apple.quarantine /Applications/DiskLens.app</code> instead of step 3.</p>
-      <p>To see every folder's real size, add DiskLens under <strong>Privacy &amp; Security › Full Disk Access</strong>, then scan again.</p>
+    <!-- Safety labels -->
+    <section class="section" id="labels">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Plain-language answers</span>
+          <h2 class="h2">Every location gets a clear verdict.</h2>
+          <p class="lead">DiskLens checks more than 40 places where macOS and your apps hide data, says what each one is, and puts it in one of four groups.</p>
+        </div>
+        <div class="grid grid-4 safety-grid reveal">
+          <div class="tile"><span class="badge safe">Safe to clear</span><p>Rebuilds itself or isn't needed any more. Clearing it loses nothing.</p></div>
+          <div class="tile"><span class="badge review">Check first</span><p>Often clearable, but may hold something you want. Look inside before deleting.</p></div>
+          <div class="tile"><span class="badge careful">Your files</span><p>Your own files. Nothing here comes back on its own, so only you can decide.</p></div>
+          <div class="tile"><span class="badge system">Leave to macOS</span><p>macOS manages this and frees it by itself, often after a restart. Don't delete by hand.</p></div>
+        </div>
+        <div class="callout reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div>
+            <h3>DiskLens never deletes anything.</h3>
+            <p>It shows you what's there, explains it, and gives you the Finder location or the exact command to clear it yourself. Nothing on your Mac changes unless you do it.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <div class="grid-2">
-      <section class="card">
-        <h3>Understand "System Data"</h3>
-        <p>DiskLens scans 40+ known locations (caches, logs, developer tools, app leftovers, installers, backups) and explains each one in plain language.</p>
-        <div class="badges">
-          <span class="badge safe">Safe to clear</span>
-          <span class="badge review">Check first</span>
+    <!-- Features -->
+    <section class="section alt" id="features">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Features</span>
+          <h2 class="h2">Everything you need to free up space.</h2>
         </div>
-      </section>
-      <section class="card">
-        <h3>Never deletes anything</h3>
-        <p>DiskLens shows you what's there and gives you the Finder location or command to clear it yourself. You stay in control.</p>
-      </section>
-      <section class="card">
-        <h3>Finds leftovers</h3>
-        <p>Spots data from apps you've uninstalled, and old <code>.dmg</code> and <code>.pkg</code> installers for apps you already have.</p>
-      </section>
-      <section class="card">
-        <h3>Watches free space</h3>
-        <p>A menu-bar monitor shows free space and notifies you when it drops below a threshold you choose. A history chart marks each cleanup.</p>
-      </section>
-    </div>
+        <div class="grid grid-3 reveal">
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="6" rx="2"/><path d="M9 9v6M14 9v6"/></svg></div>
+            <h3>Whole-disk overview</h3>
+            <p>One bar for your entire disk, split into caches, developer files, app data, your files, system and free space.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+            <h3>Folder-by-folder detail</h3>
+            <p>Caches and app data broken down per folder, each matched to the app that owns it.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div>
+            <h3>Leftover detection</h3>
+            <p>Flags data and caches left behind by apps you've already uninstalled.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8l-9-5-9 5v8l9 5z"/><path d="m3.3 7.5 8.7 5 8.7-5M12 22V12.5"/></svg></div>
+            <h3>Installer cleanup</h3>
+            <p>Finds old <code>.dmg</code>, <code>.pkg</code> and <code>.xip</code> files, and tells you if the app is already installed.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-7"/></svg></div>
+            <h3>History</h3>
+            <p>A chart of used space over time, with every cleanup marked and explained.</p>
+          </div>
+          <div class="tile">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
+            <h3>Menu-bar monitor</h3>
+            <p>Free space in your menu bar, plus a notification when it drops below a threshold you pick.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="card" style="margin-top:16px">
-      <h3>Private and open source</h3>
-      <p>Scan history and settings stay on your Mac in <code>~/Library/Application Support/DiskLens/</code>. Nothing is sent anywhere. DiskLens is licensed under Apache 2.0, and every release is built from the public source by <a href="https://github.com/devground-labs/disklens/blob/main/.github/workflows/release.yml">GitHub Actions</a>.</p>
+    <!-- Install -->
+    <section class="section" id="install">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Install</span>
+          <h2 class="h2">Up and running in a minute.</h2>
+          <p class="lead">DiskLens isn't notarized by Apple yet, so macOS asks you to approve it the first time. You only do this once.</p>
+        </div>
+        <ol class="steps reveal">
+          <li>
+            <h3>Download and drag</h3>
+            <p>Open <strong>DiskLens.dmg</strong> and drag <strong>DiskLens</strong> into <strong>Applications</strong>.</p>
+          </li>
+          <li>
+            <h3>Open it once</h3>
+            <p>macOS says it can't verify the app. Click <strong>Done</strong>.</p>
+          </li>
+          <li>
+            <h3>Approve it</h3>
+            <p>In <strong>System Settings › Privacy &amp; Security</strong>, scroll down and click <strong>Open Anyway</strong>.</p>
+          </li>
+        </ol>
+        <div class="install-note reveal">
+          <div class="tile">
+            <h3>Prefer Terminal?</h3>
+            <p>Skip step 3 by running <code>xattr -dr com.apple.quarantine /Applications/DiskLens.app</code></p>
+          </div>
+          <div class="tile">
+            <h3>See every folder</h3>
+            <p>macOS hides some folders from apps. Add DiskLens under <strong>Privacy &amp; Security › Full Disk Access</strong>, then scan again.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="h2">Questions, answered.</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Why does macOS warn me when I first open DiskLens?</summary>
+            <p>Apple shows that warning for any app that hasn't gone through its paid notarization service. DiskLens is built from its public source code by GitHub Actions, and you can read every line on GitHub. Approving it once in Privacy &amp; Security is all that's needed.</p>
+          </details>
+          <details>
+            <summary>Will DiskLens delete my files?</summary>
+            <p>No. DiskLens only reads sizes and explains what it finds. When something is safe to clear, it shows you where it is in Finder or the command to run, and you decide.</p>
+          </details>
+          <details>
+            <summary>Does it send any data anywhere?</summary>
+            <p>No. There are no accounts, analytics or network calls. Scan history and settings stay in <code>~/Library/Application Support/DiskLens/</code> on your Mac.</p>
+          </details>
+          <details>
+            <summary>Which Macs does it run on?</summary>
+            <p>Any Mac running macOS 11 Big Sur or later. The download is a universal app, so it runs natively on both Apple silicon and Intel.</p>
+          </details>
+          <details>
+            <summary>Is it really free?</summary>
+            <p>Yes. DiskLens is free and open source under the Apache 2.0 license. There's no paid tier and nothing to unlock.</p>
+          </details>
+          <details>
+            <summary>How do I uninstall it?</summary>
+            <p>Quit DiskLens from its menu-bar icon, drag it from Applications to the Trash, and optionally delete <code>~/Library/Application Support/DiskLens/</code>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section cta-final">
+      <div class="wrap reveal">
+        <img src="/disklens/icon.png" alt="" width="88" height="88">
+        <h2 class="h2">Find out where your space went.</h2>
+        <p class="lead">A full scan takes about 10 to 15 seconds.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L9 11.6V3a1 1 0 0 1 1-1zM4 16a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"/></svg>
+            Download for Mac
+          </a>
+        </div>
+        <p class="hero-meta"><a href="https://github.com/devground-labs/disklens/releases">All versions and release notes</a></p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>© 2026 devground-labs · DiskLens is open source under Apache 2.0</span>
-      <a href="https://github.com/devground-labs/disklens/issues">Report a problem</a>
+      <div class="footer-grid">
+        <div class="about">
+          <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="28" height="28"><span>devground<em>-labs</em></span></a>
+          <p>Native, private, open-source apps for the Mac.</p>
+        </div>
+        <div>
+          <h4>DiskLens</h4>
+          <ul>
+            <li><a href="https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg">Download</a></li>
+            <li><a href="https://github.com/devground-labs/disklens/releases">Release notes</a></li>
+            <li><a href="https://github.com/devground-labs/disklens">Source code</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#install">Installing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://github.com/devground-labs/disklens/issues">Report an issue</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="https://github.com/devground-labs/disklens/blob/main/LICENSE">License</a></li>
+            <li><a href="https://github.com/devground-labs/disklens/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 devground-labs</span>
+        <span>Mac is a trademark of Apple Inc.</span>
+      </div>
     </div>
   </footer>
 

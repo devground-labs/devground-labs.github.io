@@ -11,7 +11,11 @@ The custom domain is set in `CNAME`. DNS for `devgroundlabs.in` is managed at Ho
 - `index.html` is the home page, with one card per app
 - `<app>/index.html` is each app's page, with its download button and install steps
 - `assets/style.css` holds the shared styles. The colors match the DiskLens app palette.
-- `assets/site.js` fills in each app's latest version from the GitHub releases API. It's optional, and the pages work without it.
+- `assets/site.js` fills in each app's latest version from the GitHub releases API, and adds the scroll fade-ins and the header hairline. It's optional, and the pages work without it.
+- `assets/logo.svg` is the devground-labs mark (also used as `favicon.svg`)
+- `404.html` is served by GitHub Pages for unknown paths
+
+The DiskLens window on the home page and the DiskLens page is built in HTML/CSS (`.mock` in `style.css`) with illustrative numbers. Swap it for a real screenshot whenever you like.
 
 ## Adding an app
 

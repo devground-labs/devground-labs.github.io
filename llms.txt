@@ -1,0 +1,15 @@
+# devground-labs
+
+> An independent studio making focused macOS apps. Native, private by default, free and open source.
+
+## DiskLens
+
+- [DiskLens for Mac](https://devgroundlabs.in/disklens/): A free, open-source Mac app that shows what is filling your disk, explains the "System Data" category location by location in plain language, and shows what is safe to reclaim. It never deletes files itself. Requires macOS 11 or later; universal app for Apple silicon and Intel. Apache 2.0 license.
+- [Download DiskLens.dmg](https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg): Latest release.
+- [Source code](https://github.com/devground-labs/disklens): GitHub repository.
+- [Releases](https://github.com/devground-labs/disklens/releases): Versions and release notes.
+
+## Company
+
+- [Home](https://devgroundlabs.in/): All apps by devground-labs.
+- [GitHub](https://github.com/devground-labs): Organization.

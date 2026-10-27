@@ -19,6 +19,13 @@ document.querySelectorAll("[data-release-repo]").forEach(async (el) => {
   }
 });
 
+// Send GA4 events for elements tagged with data-ga-event / data-ga-location.
+document.addEventListener("click", (e) => {
+  const el = e.target.closest("[data-ga-event]");
+  if (!el || typeof gtag !== "function") return;
+  gtag("event", el.dataset.gaEvent, { location: el.dataset.gaLocation });
+});
+
 // Total .dmg downloads across all releases, from GitHub's download_count.
 // Hidden until it loads; stays hidden if offline, rate-limited, or still zero.
 document.querySelectorAll("[data-downloads-repo]").forEach(async (el) => {

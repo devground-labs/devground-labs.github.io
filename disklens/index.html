@@ -3,9 +3,136 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DiskLens for Mac · See what's filling your disk</title>
+  <title>DiskLens: Free Mac Disk Space Analyzer &amp; System Data Explorer</title>
   <meta name="description" content="DiskLens shows what's filling your Mac's disk, explains every hidden location in plain language, and tells you what's safe to reclaim. Free and open source.">
   <link rel="canonical" href="https://devgroundlabs.in/disklens/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta property="og:site_name" content="devground-labs">
+  <meta property="og:image:alt" content="DiskLens app icon">
+  <meta name="twitter:title" content="DiskLens for Mac: free disk space analyzer">
+  <meta name="twitter:description" content="See what's filling your Mac's disk, including System Data, and what's safe to reclaim. Free and open source.">
+  <meta name="twitter:image" content="https://devgroundlabs.in/disklens/icon.png">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DiskLens",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "macOS 11 or later",
+  "description": "DiskLens shows what's filling your Mac's disk, explains every hidden location in plain language, and tells you what's safe to reclaim. Free and open source.",
+  "url": "https://devgroundlabs.in/disklens/",
+  "downloadUrl": "https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg",
+  "image": "https://devgroundlabs.in/disklens/icon.png",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "devground-labs",
+    "url": "https://devgroundlabs.in/"
+  },
+  "sameAs": [
+    "https://github.com/devground-labs/disklens"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is “System Data” on a Mac, and why is it so big?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "“System Data” is the catch-all category macOS Storage settings uses for everything it can’t label as apps, documents, photos or media. It typically includes caches, logs, developer tool files, local Time Machine snapshots, device backups and virtual machine images. Because macOS doesn’t break it down, it can grow to tens or hundreds of gigabytes. DiskLens splits it into individual locations and explains what each one is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I free up System Data storage on a Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Run a scan in DiskLens and look at the locations marked safe to clear. For each one, DiskLens shows where it is in Finder or the command to run, and you decide what to remove. DiskLens never deletes anything itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does macOS warn me when I first open DiskLens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apple shows that warning for any app that hasn't gone through its paid notarization service. DiskLens is built from its public source code by GitHub Actions, and you can read every line on GitHub. Approving it once in Privacy & Security is all that's needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will DiskLens delete my files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. DiskLens only reads sizes and explains what it finds. When something is safe to clear, it shows you where it is in Finder or the command to run, and you decide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it send any data anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There are no accounts, analytics or network calls. Scan history and settings stay in ~/Library/Application Support/DiskLens/ on your Mac."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Macs does it run on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any Mac running macOS 11 Big Sur or later. The download is a universal app, so it runs natively on both Apple silicon and Intel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DiskLens is free and open source under the Apache 2.0 license. There's no paid tier and nothing to unlock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I uninstall it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quit DiskLens from its menu-bar icon, drag it from Applications to the Trash, and optionally delete ~/Library/Application Support/DiskLens/."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "devground-labs",
+      "item": "https://devgroundlabs.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "DiskLens",
+      "item": "https://devgroundlabs.in/disklens/"
+    }
+  ]
+}
+  </script>
   <link rel="icon" href="/disklens/icon.png" type="image/png">
   <link rel="stylesheet" href="/assets/style.css">
   <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
@@ -225,6 +352,14 @@
           <h2 class="h2">Questions, answered.</h2>
         </div>
         <div class="faq reveal">
+          <details>
+            <summary>What is “System Data” on a Mac, and why is it so big?</summary>
+            <p>“System Data” is the catch-all category macOS Storage settings uses for everything it can’t label as apps, documents, photos or media. It typically includes caches, logs, developer tool files, local Time Machine snapshots, device backups and virtual machine images. Because macOS doesn’t break it down, it can grow to tens or hundreds of gigabytes. DiskLens splits it into individual locations and explains what each one is.</p>
+          </details>
+          <details>
+            <summary>How can I free up System Data storage on a Mac?</summary>
+            <p>Run a scan in DiskLens and look at the locations marked safe to clear. For each one, DiskLens shows where it is in Finder or the command to run, and you decide what to remove. DiskLens never deletes anything itself.</p>
+          </details>
           <details>
             <summary>Why does macOS warn me when I first open DiskLens?</summary>
             <p>Apple shows that warning for any app that hasn't gone through its paid notarization service. DiskLens is built from its public source code by GitHub Actions, and you can read every line on GitHub. Approving it once in Privacy &amp; Security is all that's needed.</p>

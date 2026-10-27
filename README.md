@@ -21,7 +21,8 @@ The DiskLens window on the home page and the DiskLens page is built in HTML/CSS 
 
 1. Copy `disklens/` to `<app>/` and edit the text, the icon and the repo name.
 2. Add a card for it in `index.html`.
-3. In the app's release workflow, attach a file with a fixed name (like `DiskLens.dmg`) to every release. The download button links to `https://github.com/devground-labs/<app>/releases/latest/download/<File>.dmg`, which always serves the newest release, so the site doesn't need updating for each release.
+3. Add the page to `sitemap.xml` and `llms.txt`, and update its JSON-LD (`SoftwareApplication`, `FAQPage`) in the page `<head>`. Keep the FAQ JSON-LD in sync with the visible FAQ.
+4. In the app's release workflow, attach a file with a fixed name (like `DiskLens.dmg`) to every release. The download button links to `https://github.com/devground-labs/<app>/releases/latest/download/<File>.dmg`, which always serves the newest release, so the site doesn't need updating for each release.
 
 ## Preview locally
 

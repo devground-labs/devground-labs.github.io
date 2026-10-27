@@ -277,6 +277,7 @@ code {
 .fact span { font-size: 14px; color: var(--muted); }
 
 /* ---------- app showcase ---------- */
+.app-feature + .app-feature { margin-top: 20px; }
 .app-feature {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch;
   background: var(--surface); border: 1px solid var(--border); border-radius: 24px; overflow: hidden;
@@ -297,6 +298,10 @@ code {
     var(--bg-alt);
   border-left: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center; padding: 40px;
+}
+.phone-shot {
+  width: 100%; max-width: 270px; height: auto; display: block;
+  border-radius: 28px; border: 6px solid #111; box-shadow: var(--shadow-lg);
 }
 .meter {
   width: 100%; max-width: 380px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;

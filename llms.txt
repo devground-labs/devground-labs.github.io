@@ -1,6 +1,6 @@
 # devground-labs
 
-> An independent studio making focused macOS apps. Native, private by default, free and open source.
+> An independent studio making focused apps for the Mac and the web. Free and open source.
 
 ## DiskLens
 
@@ -8,6 +8,11 @@
 - [Download DiskLens.dmg](https://github.com/devground-labs/disklens/releases/latest/download/DiskLens.dmg): Latest release.
 - [Source code](https://github.com/devground-labs/disklens): GitHub repository.
 - [Releases](https://github.com/devground-labs/disklens/releases): Versions and release notes.
+
+## NoBurnout
+
+- [NoBurnout](https://noburnout.in): Short browser games for software engineers to play between prompts, builds and code reviews. Eight games, including 3D tank duels, a highway racer, pinball and logic puzzles. No installs, no accounts, no streaks. MIT license.
+- [Source code](https://github.com/devground-labs/noburnout): GitHub repository.
 
 ## Company
 
